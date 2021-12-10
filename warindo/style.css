@@ -1,0 +1,30 @@
+.jumbotron {
+    margin-top: 40px;
+}
+
+.biodata {
+    margin-top: 40px;
+}
+
+.biodata h2 {
+    margin-top: 10px;
+}
+
+.container h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.row {
+    margin-left: 100px;
+}
+
+.description h1 {
+    margin: auto;
+}
+.footer {
+    margin-top:12%;
+    position: absolute;
+    width: 100%;
+
+}
