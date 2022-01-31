@@ -72,17 +72,29 @@
         </div>
 
         <br>
-        <a href="./contact.html" class="btn btn-primary float-end" role="button" onclick="alert('Pesanan anda sedang kami proses, klik ok untuk kembali')">Proses</a>
+        <button type="button" class="btn btn-warning float-end" onclick="i()">Proses</button>
     </div>
 
-     <!-- Footer -->
-     <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
         <div class="text-center p-4 bg-light m-lg-5">
             © 2021 Copyright:
             <a class="text-reset">Hafid Al Azhar X RPL 2</a>
-            </div>
         </div>
-
+    </div>
+</body>
+<script src="../warindo/package/dist/sweetalert2.all.min.js"></script>
+<script>
+    function i() {
+        Swal.fire({
+            icon: 'info',
+            title: 'Proses',
+            text: 'Pesanan kamu sedang kami proses',
+        }).then(function () {
+            window.location = "contact.html";
+        });
+    }
+</script>
 
 
 </html>

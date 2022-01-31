@@ -65,27 +65,40 @@
 
             <label>Email : </label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Silahkan Masukan email anda" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Silahkan Masukan email anda"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <span class="input-group-text" id="basic-addon2">@gmail.com</span>
-              </div>
+            </div>
 
             <label for="pesan">Pesan : </label>
             <textarea class="form-control" rows="5" id="pesan" name="text" placeholder="Saran Untuk Kita"></textarea>
             <br>
-            <a href="./index.html" class="btn btn-warning float-end" role="button" onclick="alert('Terimakasih, saran anda sudah kami terima')">Kirim</a>
+            <button type="button" class="btn btn-warning float-end" onclick="i()">Kirim</button>
         </div>
     </body>
 
     </html>
 
-     <!-- Footer -->
-     <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
         <div class="text-center p-4 bg-light m-lg-5">
             © 2021 Copyright:
             <a class="text-reset">Hafid Al Azhar X RPL 2</a>
-            </div>
         </div>
+    </div>
 
 </body>
+<script src="../warindo/package/dist/sweetalert2.all.min.js"></script>
+<script>
+    function i() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Terimakasih',
+            text: 'Saran kamu sudah kami terima',
+        }).then(function () {
+            window.location = "index.html";
+        });
+    }
+</script>
 
 </html>

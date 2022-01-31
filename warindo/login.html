@@ -115,16 +115,30 @@
         justify-content: center;
     }
 </style>
+<script src="../warindo/package/dist/sweetalert2.all.min.js"></script>
 <script>
     function Validate() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if (username == "hafid@gmail.com" && password == "hafid123") {
-            alert("Login Sukses")
-            window.location = "chekout.html"
+            Swal.fire({
+                icon: 'success',
+                title: 'Login berhasil',
+                text: 'Selamat berbelanja',
+            }).then(function () {
+                window.location = "chekout.html";
+            });
         } else if (username == "" && password == "") {
-            alert("Silahkan isi Email dan Password")
-        } else alert("Password dan Email Salah")
+            Swal.fire({
+                icon: 'warning',
+                title: 'Username & Password kosong',
+                text: 'Silahkan isi Username dan Password',
+            });
+        } else Swal.fire({
+            icon: 'error',
+            title: 'Oops, Username atau Password salah',
+            text: 'Silahkan isi Username dan Password dengan benar',
+        });
 
     }
 </script>
